@@ -10,7 +10,7 @@ import {
 import { businessesApi } from '@/api/businesses'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
-
+import { WhatsAppTest } from '@/components/WhatsAppTest'
 const statCards = [
   { key: 'total', label: 'Total Leads', icon: Globe, color: 'text-blue-400', bg: 'bg-blue-500/10', link: '/leads' },
   { key: 'no_website', label: 'No Website', icon: WifiOff, color: 'text-amber-400', bg: 'bg-amber-500/10', link: '/leads?website_status=NO_WEBSITE' },
@@ -95,7 +95,7 @@ export function Dashboard() {
           </p>
         )}
       </div>
-
+<WhatsAppTest />
       {/* Stat cards */}
       <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-6">
         {statCards.map(({ key, label, icon: Icon, color, bg, link }) => (
