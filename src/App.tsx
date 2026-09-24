@@ -5,6 +5,9 @@ import { Layout } from '@/components/Layout'
 import { Leads } from '@/pages/Leads'
 import { LeadDetails } from '@/pages/LeadDetails'
 import { Skeleton } from '@/components/ui/skeleton'
+import { WhatsApp } from '@/pages/WhatsApp'
+import { AccountManagement } from '@/pages/AccountManagement'
+import { WhatsAppConnection } from '@/pages/WhatsAppConnection'
 
 // Lazy-loaded so the charting library (recharts) only downloads when the dashboard is opened
 const Dashboard = lazy(() => import('@/pages/Dashboard').then((m) => ({ default: m.Dashboard })))
@@ -31,6 +34,10 @@ export default function App() {
             />
             <Route path="leads" element={<Leads />} />
             <Route path="leads/:id" element={<LeadDetails />} />
+            <Route path="whatsapp" element={<WhatsApp />} />
+            <Route path="account-management" element={<AccountManagement />}>
+            <Route path="whatsapp" element={<WhatsAppConnection />} />
+          </Route>
           </Route>
         </Routes>
       </BrowserRouter>

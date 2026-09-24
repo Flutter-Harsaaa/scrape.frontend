@@ -534,15 +534,16 @@ export function Leads() {
                 </div>
                 <div className="flex items-center gap-0.5 shrink-0 mt-0.5">
                   {b.phone_type === 'mobile' && waPhone && (
-                    <a
-                      href={`https://wa.me/${waPhone}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        navigate(`/whatsapp?leadId=${b.id}`)
+                      }}
                       className="flex h-7 w-7 items-center justify-center rounded text-emerald-500 hover:bg-emerald-500/10 transition-colors"
-                      title="Open WhatsApp"
+                      title={b.lead_status === 'CONTACTED' ? 'Open conversation' : 'Open lead WhatsApp workflow'}
                     >
                       <MessageCircle className="h-3.5 w-3.5" />
-                    </a>
+                    </button>
                   )}
                   {b.phone && (
                     <button
@@ -678,15 +679,16 @@ export function Leads() {
                   <TableCell onClick={(e) => e.stopPropagation()}>
                     <div className="flex items-center gap-0.5">
                       {b.phone_type === 'mobile' && waPhone && (
-                        <a
-                          href={`https://wa.me/${waPhone}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            navigate(`/whatsapp?leadId=${b.id}`)
+                          }}
                           className="flex h-7 w-7 items-center justify-center rounded text-emerald-500 hover:bg-emerald-500/10 transition-colors"
-                          title="Open WhatsApp"
+                          title={b.lead_status === 'CONTACTED' ? 'Open conversation' : 'Open lead WhatsApp workflow'}
                         >
                           <MessageCircle className="h-3.5 w-3.5" />
-                        </a>
+                        </button>
                       )}
                       {b.phone && (
                         <button
