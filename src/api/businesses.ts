@@ -11,7 +11,7 @@ export interface Business {
   rating: number | null
   review_count: number | null
   website_status: 'UNCHECKED' | 'NO_WEBSITE' | 'WORKING' | 'BROKEN'
-  lead_status: 'NEW' | 'CONTACTED' | 'INTERESTED' | 'WON' | 'LOST'
+  lead_status: 'NEW' | 'CONTACTED' | 'CALL_CONNECTED' | 'INTERESTED' | 'WON' | 'LOST' | 'INVALID_CONTACT'
   notes: string | null
   next_followup_date: string | null
   created_at: string

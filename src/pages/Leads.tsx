@@ -20,11 +20,13 @@ import { toast } from '@/components/ui/use-toast'
 
 const LEAD_STATUSES = [
   { value: 'all', label: 'All Statuses' },
-  { value: 'NEW', label: 'NEW' },
-  { value: 'CONTACTED', label: 'CONTACTED' },
-  { value: 'INTERESTED', label: 'INTERESTED' },
-  { value: 'WON', label: 'WON' },
-  { value: 'LOST', label: 'LOST' },
+  { value: 'NEW', label: 'New' },
+  { value: 'CONTACTED', label: 'Contacted' },
+  { value: 'CALL_CONNECTED', label: 'Call Connected' },
+  { value: 'INTERESTED', label: 'Interested' },
+  { value: 'WON', label: 'Won' },
+  { value: 'LOST', label: 'Lost' },
+  { value: 'INVALID_CONTACT', label: 'Invalid Contact' },
 ]
 const WEBSITE_STATUSES = [
   { value: 'all', label: 'All Websites' },

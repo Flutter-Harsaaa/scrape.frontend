@@ -39,8 +39,15 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { WebsiteStatusBadge, LeadStatusBadge } from '@/components/StatusBadge'
 import { toast } from '@/components/ui/use-toast'
 
-const LEAD_STATUSES = ['NEW', 'CONTACTED', 'INTERESTED', 'WON', 'LOST']
-
+const LEAD_STATUSES = [
+  'NEW',
+  'CONTACTED',
+  'CALL_CONNECTED',
+  'INTERESTED',
+  'WON',
+  'LOST',
+  'INVALID_CONTACT',
+]
 function formatStatus(value: string | null | undefined) {
   if (!value) return 'Not set'
   return value
